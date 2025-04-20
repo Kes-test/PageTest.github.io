@@ -43,16 +43,17 @@ nav a:hover {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the left to help with the 5-per-row layout */
     gap: 10px;
     padding: 20px;
 }
 
 .gallery img {
-    width: 200px;    /* Thumbnail size */
+    width: calc(20% - 10px); /* Approximately 20% width minus gap for 5 images */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 10px; /* Add some vertical spacing */
 }
 
 .gallery img:hover {
@@ -60,6 +61,15 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
+/* Remove right margin from every 5th image for cleaner layout */
+.gallery img:nth-child(5n) {
+    margin-right: 0;
+}
+
+/* Add right margin to all images except the last in each row */
+.gallery img:not(:nth-child(5n)) {
+    margin-right: 10px;
+}
 /* Lightbox Styling */
 .lightbox {
     display: none;
