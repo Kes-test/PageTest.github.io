@@ -49,7 +49,7 @@ nav a:hover {
 }
 
 .gallery img {
-    width: calc(20% - 10px); /* Approximately 20% width minus gap for 5 images */
+    width: calc(18% - 10px); /* Approximately 20% width minus gap for 5 images */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
