@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dave's Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Dave's Photo Gallery</h1>
+        <p>Capturing life one frame at a time</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+        <img src="image5.jpg" alt="Image 5">
+        <img src="image6.jpg" alt="Image 6">
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Lightbox Section -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="">
+        <button class="prev" onclick="prevImage(event)">&#10094;</button>
+        <button class="next" onclick="nextImage(event)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
